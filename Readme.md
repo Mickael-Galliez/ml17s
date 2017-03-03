@@ -1,3 +1,3 @@
 
-Notes and assignments for Stanford CS class [CS231n: Convolutional Neural Networks for Visual Recognition](http://vision.stanford.edu/teaching/cs231n/)
+Notes and assignments for UCP class [CSAL4243: Introduction to Machine Learning](http://w4zir.github.io/ml17s/)
 
