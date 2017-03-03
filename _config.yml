@@ -1,11 +1,11 @@
 # Site settings
-title: CS231n Convolutional Neural Networks for Visual Recognition
-email: karpathy@cs.stanford.edu
-description: "Course materials and notes for Stanford class CS231n: Convolutional Neural Networks for Visual Recognition."
+title: CSAL4243 Introduction to Machine Learning
+email: mudassir.khan@ucp.edu.pk
+description: "Course materials and notes for UCP class CSAL4243: Introduction to Machine Learning."
 baseurl: ""
-url: "http://cs231n.github.io"
-twitter_username: cs231n
-github_username:  cs231n
+url: "http://w4zir.github.io/ml17s"
+#twitter_username: cs231n
+github_username:  w4zir
 
 # Build settings
 markdown: kramdown
@@ -16,4 +16,3 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
-
