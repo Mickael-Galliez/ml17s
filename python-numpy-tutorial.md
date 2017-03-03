@@ -28,12 +28,9 @@ Python is a great general-purpose programming language on its own, but with the
 help of a few popular libraries (numpy, scipy, matplotlib) it becomes a powerful
 environment for scientific computing.
 
-We expect that many of you will have some experience with Python and numpy;
-for the rest of you, this section will serve as a quick crash course both on
+You should get yourself familiar with Python and numpy using a quick crash course both on
 the Python programming language and on the use of Python for scientific
 computing.
-
-Some of you may have previous knowledge in Matlab, in which case we also recommend the [numpy for Matlab users](http://wiki.scipy.org/NumPy_for_Matlab_Users) page.
 
 You can also find an [IPython notebook version of this tutorial here](https://github.com/kuleshov/cs228-material/blob/master/tutorials/python/cs228-python-tutorial.ipynb) created by [Volodymyr Kuleshov](http://web.stanford.edu/~kuleshov/) and [Isaac Caswell](https://symsys.stanford.edu/viewing/symsysaffiliate/21335) for [CS 228](http://cs.stanford.edu/~ermon/cs228/index.html).
 
@@ -82,7 +79,7 @@ def quicksort(arr):
     middle = [x for x in arr if x == pivot]
     right = [x for x in arr if x > pivot]
     return quicksort(left) + middle + quicksort(right)
-    
+
 print quicksort([3,6,8,10,1,2,1])
 # Prints "[1, 1, 2, 3, 6, 8, 10]"
 ```
@@ -139,7 +136,7 @@ print type(t) # Prints "<type 'bool'>"
 print t and f # Logical AND; prints "False"
 print t or f  # Logical OR; prints "True"
 print not t   # Logical NOT; prints "False"
-print t != f  # Logical XOR; prints "True" 
+print t != f  # Logical XOR; prints "True"
 ```
 
 **Strings:** Python has great support for strings:
@@ -411,18 +408,18 @@ The syntax for defining classes in Python is straightforward:
 
 ```python
 class Greeter(object):
-    
+
     # Constructor
     def __init__(self, name):
         self.name = name  # Create an instance variable
-        
+
     # Instance method
     def greet(self, loud=False):
         if loud:
             print 'HELLO, %s!' % self.name.upper()
         else:
             print 'Hello, %s' % self.name
-        
+
 g = Greeter('Fred')  # Construct an instance of the Greeter class
 g.greet()            # Call an instance method; prints "Hello, Fred"
 g.greet(loud=True)   # Call an instance method; prints "HELLO, FRED!"
@@ -472,7 +469,7 @@ import numpy as np
 a = np.zeros((2,2))  # Create an array of all zeros
 print a              # Prints "[[ 0.  0.]
                      #          [ 0.  0.]]"
-    
+
 b = np.ones((1,2))   # Create an array of all ones
 print b              # Prints "[[ 1.  1.]]"
 
@@ -483,7 +480,7 @@ print c               # Prints "[[ 7.  7.]
 d = np.eye(2)        # Create a 2x2 identity matrix
 print d              # Prints "[[ 1.  0.]
                      #          [ 0.  1.]]"
-    
+
 e = np.random.random((2,2)) # Create an array filled with random values
 print e                     # Might print "[[ 0.91940167  0.08143941]
                             #               [ 0.68744134  0.87236687]]"
@@ -567,7 +564,7 @@ import numpy as np
 a = np.array([[1,2], [3, 4], [5, 6]])
 
 # An example of integer array indexing.
-# The returned array will have shape (3,) and 
+# The returned array will have shape (3,) and
 print a[[0, 1, 2], [0, 1, 0]]  # Prints "[1 4 5]"
 
 # The above example of integer array indexing is equivalent to this:
@@ -624,7 +621,7 @@ bool_idx = (a > 2)  # Find the elements of a that are bigger than 2;
                     # this returns a numpy array of Booleans of the same
                     # shape as a, where each slot of bool_idx tells
                     # whether that element of a is > 2.
-            
+
 print bool_idx      # Prints "[[False False]
                     #          [ True  True]
                     #          [ True  True]]"
@@ -755,7 +752,7 @@ You can find the full list of mathematical functions provided by numpy
 
 Apart from computing mathematical functions using arrays, we frequently
 need to reshape or otherwise manipulate data in arrays. The simplest example
-of this type of operation is transposing a matrix; to transpose a matrix, 
+of this type of operation is transposing a matrix; to transpose a matrix,
 simply use the `T` attribute of an array object:
 
 ```python
@@ -1028,7 +1025,7 @@ across two sets of points; you can read about it
 <a name='matplotlib'></a>
 
 ## Matplotlib
-[Matplotlib](http://matplotlib.org/) is a plotting library. 
+[Matplotlib](http://matplotlib.org/) is a plotting library.
 In this section give a brief introduction to the `matplotlib.pyplot` module,
 which provides a plotting system similar to that of MATLAB.
 
