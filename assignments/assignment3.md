@@ -16,9 +16,12 @@ CIFAR-10 has 60,000 images (50,000 training and 10,000 test images) of 10 differ
 
 ### Installing Dependencies
 You need the following packages installed. It will install all other packages needed for this assignment.
-- SciPy
+
 - tensorflow
 - tflearn
+- h5py
+- hdf5
+- SciPy
 
 ##### Tensorflow
 If you have [anaconda](https://www.continuum.io/) installed, then installing tensorflow and tflearn is straightforward. To install tensorflow, activate your conda environment and run the following command.
@@ -27,20 +30,20 @@ If you have [anaconda](https://www.continuum.io/) installed, then installing ten
 
 Press 'y' when asked for permission. This will install tensorflow and all required packages.
 
-##### SciPy
-You can directly install scipy using anaconda.
-
-        conda install scipy
-
 ##### tflearn
 To install tflearn run the following command in Ubuntu. 'pip' should already be installed on your system.
 
-        pip install tflearn.
+        pip install tflearn
+
+##### Other packages
+You can directly install other packages using anaconda.
+
+        conda install package_name
 
 
 ### Tasks
 #### 1. Create, Train and Save a CNN Model:
-First task is to use the code from tflearn CNN for CIFAR-10 given at [link](https://github.com/tflearn/tflearn/blob/master/examples/images/convnet_cifar10.py) and modify it according to the following architecture. Run the algorithm for 5 epochs and save the model using the **mode.save('filename')** command at the end of the code.
+First task is to use the code from tflearn CNN for CIFAR-10 given at [link](https://github.com/tflearn/tflearn/blob/master/examples/images/convnet_cifar10.py) and modify it according to the following architecture. Run the algorithm for 5 epochs and save the model using the **mode.save('filename')** command at the end of the code. Skeleton code is given in file tf_cnn_train.py.
 
 #### Layers
   1. Conv: 64 filters of size 3x3 with ReLU activation
@@ -62,19 +65,33 @@ Train the model with a batch size of 64 and run it for at least 5 epochs (number
 #### Save Model
 Save the model by inserting the following command at the end of the code.
 
-          ```
           model.save('filename.tfl')
-          ```
+
 #### Deliverable Task 1
 Provide a screenshot of your simulation after 5 epochs.
 
 #### 2. Load and Refine Model:
-In this task you will load the model saved in task 1 and refine it by running for at least 5 more epochs. Compare the results by providing a screenshot of the accuracy. Use the template code in tf_ccn_refine.py file and just add the following line to after your define to model to load the model first and then retrain it.
+In this task you will load the model saved in task 1 and refine it by running for at least 5 more epochs. Compare the results by providing a screenshot of the accuracy. Use the template code in tf_ccn_refine.py file and just add the following line to after you define to model to load the model first and then retrain it.
 
         model.load(model, 'filename.tfl')
 
+#### Deliverable Task 2
+Provide a screenshot of your simulation after retraining the model for at least 5 epochs.
+
+
 #### 3. Test Model on unseen data:
-In this task you will test your trained model on unseen data to see how good it works. Test images are provided in the test_images folder. Place the file images_database.txt in the same directory as tf_cnn_test.py file. This file will load the model and test images and then find the accuracy of your trained model on these test images. Provide screenshot of your accuracy result.
+In this task you will test your trained model on unseen data to see how good it works. We will use 'image_preloader' class from tflearn for this task. Test images are provided in the test_images folder. images_database.txt file contain images path+name and their corresponding label as nominal value on each line separated by space (check the file). You can add more files to the test_images folder by adding file name and its label to images_database.txt file. Labels for CIFAR-10 are given below. Place the file images_database.txt in the same directory as tf_cnn_test.py file which has the skeleton code for this task.  This file will load the model and test images and then find the accuracy of your trained model on these test images. Provide screenshot of your accuracy result.
+
+          - airplane  0
+          - car       1
+          - bird      2
+          - car       3
+          - deer      4
+          - dog       5
+          - frog      6
+          - horse     7
+          - ship      8
+          - truck     9
 
 #### 4. Bonus: Get an accuracy of above 85%
 Get an accuracy of above 85% of test images for bonus marks.
