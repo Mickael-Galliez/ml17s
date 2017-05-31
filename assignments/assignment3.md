@@ -8,11 +8,15 @@ permalink: /assignments/assignment3/
 In this assignment we will train a [Convolutional Neural Network (CNN)](http://cs231n.github.io/convolutional-networks/) on [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset that has 10 distinct classes and around 50,000 images using [tflearn](http://tflearn.org/) and [tensorflow](https://www.tensorflow.org/). The aim is to understand different layers of CNN and how to use tflearn to train a CNN to classify images. Save and load the trained model. And use the trained model to evaluate the accuracy of the model on test images.
 
 <div class='fig figcenter'>
-  <img src='images/cnn.jpg'>
+  <img src='images/cnn.png'>
 </div>
 
 ### CIFAR-10 dataset
 CIFAR-10 has 60,000 images (50,000 training and 10,000 test images) of 10 different categories (airplane, car/automobile, bird, cat, deer, dog, frog, horse, sheep, truck). Each image in CIFAR-10 has dimension 32x32x3 with width and height equal to 32 and 3 channels (red, green and blue).
+
+<div class='fig figcenter'>
+  <img src='images/cifar10.png'>
+</div>
 
 ### Installing Dependencies
 You need the following packages installed. It will install all other packages needed for this assignment.
