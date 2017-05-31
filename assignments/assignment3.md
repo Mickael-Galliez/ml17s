@@ -8,7 +8,7 @@ permalink: /assignments/assignment3/
 In this assignment we will train a [Convolutional Neural Network (CNN)](http://cs231n.github.io/convolutional-networks/) on [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset that has 10 distinct classes and around 50,000 images using [tflearn](http://tflearn.org/) and [tensorflow](https://www.tensorflow.org/). The aim is to understand different layers of CNN and how to use tflearn to train a CNN to classify images. Save and load the trained model. And use the trained model to evaluate the accuracy of the model on test images.
 
 <div class='fig figcenter'>
-  <img src='assignments/images/cnn.png'>
+  <img src='../images/cnn.png'>
 </div>
 
 ### CIFAR-10 dataset
@@ -78,7 +78,7 @@ Provide a screenshot of your simulation after 5 epochs.
 #### 2. Load and Refine Model:
 In this task you will load the model saved in task 1 and refine it by running for at least 5 more epochs. Compare the results by providing a screenshot of the accuracy. Use the template code in tf_ccn_refine.py file and just add the following line to after you define to model to load the model first and then retrain it.
 
-        model.load(model, 'filename.tfl')
+        model.load('filename.tfl')
 
 #### Deliverable Task 2
 Provide a screenshot of your simulation after retraining the model for at least 5 epochs.
