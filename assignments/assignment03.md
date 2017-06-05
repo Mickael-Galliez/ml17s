@@ -41,11 +41,11 @@ You can directly install other packages using anaconda.
         conda install package_name
 
 #### Note: For Windows
-In order to install these packages in anaconda in Windows systems, launch your environment in console or simply launch anaconda console then activate your environment. Now you can install these packages using above commands.
+In order to install these packages in anaconda in Windows systems, first create a new environment with python 3.5. Now launch your environment in console or simply launch anaconda console then activate your environment. Now you can install these packages using above commands.
 
 You can install tensorflow in Windows by first creating an environment with python=3.5 then install tensorflow from conda-forge repository. Lastly install tflearn using pip.
 
-        conda create -n my_env python=3.5
+        conda create -n my_env python=3.5  # run this if you did not create environment using graphical interface otherwise ignore.
         conda install -c conda-forge tensorflow
         pip install tflearn
 
