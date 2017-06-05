@@ -43,6 +43,12 @@ You can directly install other packages using anaconda.
 #### Note: For Windows
 In order to install these packages in anaconda in Windows systems, launch your environment in console or simply launch anaconda console then activate your environment. Now you can install these packages using above commands.
 
+You can install tensorflow in Windows by first creating an environment with python=3.5 then install tensorflow from conda-forge repository. Lastly install tflearn using pip.
+
+        conda create -n my_env python=3.5
+        conda install -c conda-forge tensorflow
+        pip install tflearn
+
 ### Tasks
 #### 1. Create, Train and Save a CNN Model:
 First task is to use the code from tflearn CNN for CIFAR-10 given at [link](https://github.com/tflearn/tflearn/blob/master/examples/images/convnet_cifar10.py) and modify it according to the following architecture. Run the algorithm for 5 epochs and save the model using the **mode.save('filename')** command at the end of the code. Skeleton code is given in file tf_cnn_train.py.
