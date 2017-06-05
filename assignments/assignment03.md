@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Assignment 3: Convolutional Neural network (CNN) for image classification
-permalink: /assignments/assignment3/
+permalink: /assignments/assignment03/
 ---
 
 ### Introduction
