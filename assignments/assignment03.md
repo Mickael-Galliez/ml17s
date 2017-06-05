@@ -27,6 +27,8 @@ You need the following packages installed. It will install all other packages ne
 If you have [anaconda](https://www.continuum.io/) installed, then installing tensorflow and tflearn is straightforward. To install tensorflow, activate your conda environment and run the following command.
 
         conda install tensorflow
+        or
+        conda install -c conda-forge tensorflow
 
 Press 'y' when asked for permission. This will install tensorflow and all required packages.
 
@@ -41,11 +43,9 @@ You can directly install other packages using anaconda.
         conda install package_name
 
 #### Note: For Windows
-In order to install these packages in anaconda in Windows systems, first create a new environment with python 3.5. Now launch your environment in console or simply launch anaconda console then activate your environment. Now you can install these packages using above commands.
+In order to install these packages in anaconda on Windows systems, first create a new environment with python 3.5 using anaconda navigator or the first command below. Now launch your environment in console or simply launch anaconda console and activate your environment using command 'activate env_name'. To install tensorflow and tflearn you can use commands given below.
 
-You can install tensorflow in Windows by first creating an environment with python=3.5 then install tensorflow from conda-forge repository. Lastly install tflearn using pip.
-
-        conda create -n my_env python=3.5  # run this if you did not create environment using graphical interface otherwise ignore.
+        conda create -n my_env python=3.5  # run this if you did not create environment using anaconda gui.
         conda install -c conda-forge tensorflow
         pip install tflearn
 
