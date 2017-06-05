@@ -45,6 +45,8 @@ You can directly install other packages using anaconda.
 
         conda install package_name
 
+##### For Windows
+In order to install these packages in anaconda in Windows systems, launch your environment in console or simply launch anaconda console then activate your environment. Now you can install these packages using above commands.
 
 ### Tasks
 #### 1. Create, Train and Save a CNN Model:
