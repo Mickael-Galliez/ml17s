@@ -49,6 +49,11 @@ In order to install these packages in anaconda on Windows systems, first create 
         conda install -c conda-forge tensorflow
         pip install tflearn
 
+##### data_batch_1 file not found error
+If you encounter this error then go to the cifar10.py file mentioned in the error and add the following line after function name on line 57. In order to add go to the start of the line press space 4 times (for indentation purpose) then add the following line.
+
+        fpath = os.path.join('cifar-10-batches-py',fpath)
+
 ### Tasks
 #### 1. Create, Train and Save a CNN Model:
 First task is to use the code from tflearn CNN for CIFAR-10 given at [link](https://github.com/tflearn/tflearn/blob/master/examples/images/convnet_cifar10.py) and modify it according to the following architecture. Run the algorithm for 5 epochs and save the model using the **mode.save('filename')** command at the end of the code. Skeleton code is given in file tf_cnn_train.py.
@@ -65,7 +70,7 @@ First task is to use the code from tflearn CNN for CIFAR-10 given at [link](http
   9. Fully Connected output layer: with 10 neurons (equal to number of classes) and softmax classifier.
 
 #### Estimator
-Use a logistic regression estimator with gradient descent optimizer = ‘adam’,  loss function =  ‘categorical_crossentropy’ and learning rate = 0.01
+Use a logistic regression estimator with gradient descent optimizer = ‘adam’,  loss function =  ‘categorical_crossentropy’ and learning rate = 0.001
 
 #### Training
 Train the model with a batch size of 64 and run it for at least 5 epochs (number of iterations over the whole training dataset) in first training phase.
