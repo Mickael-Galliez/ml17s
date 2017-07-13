@@ -7,8 +7,6 @@ permalink: /projects-17s/
 List of projects done by students as part of the course are  given below.
 Github repository for each project can be reached by clicking on the project name.
 
-<div class="module-header">Assignments</div>
-
 <ol style="margin-top:10px;">
 <li>
 <div class="materials-item">
@@ -31,7 +29,6 @@ Github repository for each project can be reached by clicking on the project nam
   </a>
 </div>
 </li>
-</ol>
 <li>
 <div class="materials-item">
   <a href="https://github.com/AZEEM1234/Distracted-Driver-Detection">
@@ -102,4 +99,4 @@ Github repository for each project can be reached by clicking on the project nam
   </a>
 </div>
 </li>
-  </div>
+</ol>
